@@ -19,6 +19,13 @@ body {
 }
 
 .timer{
+    font-size: 32px;
+    font-family: 'Noto Sans Runic', sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+    .timer{
     font-size: 14px;
     font-family: 'Noto Sans Runic', sans-serif;
+}
 }
