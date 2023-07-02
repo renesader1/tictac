@@ -118,5 +118,5 @@ function changeImageSource() {
   currentIndex = (currentIndex + 1) % imageSources.length;
 }
 
-// Change image source every 2 seconds
-setInterval(changeImageSource, 2000);
+// Change image source every 1 seconds
+setInterval(changeImageSource, 1000);
