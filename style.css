@@ -1,31 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Runic&display=swap');
-
-
-
-html, body {
-    height: 100%;
-}
-
-html {
-    display: table;
-    margin: auto;
-}
-
 body {
-    display: table-cell;
+    display: flex;
     vertical-align: middle;
     background-color: black ;
-    color: white
+    color: white;
+    padding: 2em;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .timer{
-    font-size: 32px;
+    font-size: 30px;
     font-family: 'Noto Sans Runic', sans-serif;
 }
 
 @media screen and (max-width: 600px) {
     .timer{
-    font-size: 21px;
+    font-size: 20px;
     font-family: 'Noto Sans Runic', sans-serif;
 }
+}
+
+.container-simbolo{
+    
+}
+
+.simbolo{
+    display: block;
+    width: 35%;
 }

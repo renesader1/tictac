@@ -1,5 +1,5 @@
 // Set the date we're counting down to
-var countDownDate = new Date("Jul 2, 2023 14:30:00").getTime();
+var countDownDate = new Date("Jul 3, 2023 14:30:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -17,7 +17,10 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = `${numeros[days]} , ${numeros[hours]}:${numeros[minutes]}:${numeros[seconds]}`;
+  let display = `${numeros[days]} , ${numeros[hours]}:${numeros[minutes]}:${numeros[seconds]}`;
+
+  document.getElementById("demo").innerHTML = display
+  console.log(days, hours, minutes, seconds)
 
   // If the count down is finished, write some text
   if (distance < 0) {
@@ -89,3 +92,31 @@ numeros = {
     59	: "ᚠᛖᛗᛏᛁᚾᛁ ",	
     60	: "ᛊᛖᚲᛊᛏᛁ",            
 }
+
+// HTML element to change the image source
+const imageElement = document.getElementById('simbolos');
+
+// Array of image sources
+const imageSources = [
+  'Sangue.svg',
+  'Conhecimento.svg',
+  'Energia.svg',
+  'Morte.svg',
+];
+
+let currentIndex = 0;
+
+// Function to change the image source
+function changeImageSource() {
+  // Get the image source from the current index
+  const currentImageSource = imageSources[currentIndex];
+
+  // Update the image source
+  imageElement.src = currentImageSource;
+
+  // Increment the index for the next image
+  currentIndex = (currentIndex + 1) % imageSources.length;
+}
+
+// Change image source every 2 seconds
+setInterval(changeImageSource, 2000);
